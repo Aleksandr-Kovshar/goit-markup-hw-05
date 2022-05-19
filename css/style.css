@@ -117,6 +117,7 @@ nav {
   letter-spacing: 0.02em;
   color: var(--main-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
@@ -137,6 +138,7 @@ nav {
   fill: var(--secondary-color);
   display: flex;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts:last-child {
   margin-right: 0px;
@@ -205,6 +207,7 @@ nav {
   margin-left: auto;
   margin-right: auto;
   padding: 10px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* font-family:inherit; - унаследовать шрифт предка  */
 }
 .main-button:hover,
@@ -358,6 +361,7 @@ nav {
   box-sizing: 0px;
   border: none;
   padding: 6px 22px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 filter-button:last child {
   margin-right: 0px;
@@ -413,6 +417,7 @@ address {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contacts:hover,
@@ -427,6 +432,7 @@ address {
   margin-left: 30px;
   margin-top: 30px;
   flex-basis: calc((100% - 90px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-item:hover, portfolio-list-item:focus{
   border: 1px solid #EEEEEE;
@@ -522,6 +528,7 @@ img {
   justify-content: center;
   align-items: center;
   color: #AFB1B8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -569,6 +576,7 @@ img {
   background-color: rgb(255, 255, 255, 10%);
   background-repeat: no-repeat;
   background-position: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-footer-svg{
   width: 20px;
@@ -609,6 +617,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   color: #AFB1B8;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
   .social-team-svg {
@@ -622,3 +631,28 @@ img {
     background-color: var(--accent-bg-color);
     color: #FFFFFF;
   }
+
+/* Modal window */
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  min-width: 528px;
+  min-height: 581px;
+  background-color: #FFFFFF;
+}
