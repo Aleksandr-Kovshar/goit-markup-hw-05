@@ -24,7 +24,7 @@
         <nav>
           <ul class="header-link-list">
             <li class="nav-item">
-              <a class="header-link" href="index.html">Студия</a>
+              <a class="header-link link-studia" href="index.html">Студия</a>
             </li>
             <li class="nav-item">
               <a class="header-link" href="portfolio.html">Портфолио</a>
@@ -125,18 +125,39 @@
           <h2 class="gallery-name">Чем мы занимаемся</h2>
           <ul class="gallery-list">
             <li class="gallery-list-item">
-              <img
-                src="./images/gallery/box1.jpg"
-                width="370"
-                height="294"
-                alt="Програмирование"
-              />
+              <div class="gallery-thumb">
+                <img
+                  src="./images/gallery/box1.jpg"
+                  width="370"
+                  height="294"
+                  alt="Десктопные приложения"
+                />
+                <div class="gallery-item-font">
+                  <p class="gallery-item-name">Десктопные приложения</p>
+                </div>
+              </div>
             </li>
             <li class="gallery-list-item">
-              <img src="./images/gallery/box2.jpg" alt="Верстка" />
+              <div class="gallery-thumb">
+                <img
+                  src="./images/gallery/box2.jpg"
+                  alt="Мобильные приложения"
+                />
+                <div class="gallery-item-font">
+                  <p class="gallery-item-name">Мобильные приложения</p>
+                </div>
+              </div>
             </li>
             <li class="gallery-list-item">
-              <img src="./images/gallery/box3.jpg" alt="Дизайн" />
+              <div class="gallery-thumb">
+                <img
+                  src="./images/gallery/box3.jpg"
+                  alt="Дизайнерские решения"
+                />
+                <div class="gallery-item-font">
+                  <p class="gallery-item-name">Дизайнерские решения</p>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -471,7 +492,11 @@
     <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="" data-modal-close>Закрыть</button>
+        <button class="modal-btn-close" data-modal-close>
+          <svg class="modal-btn-close-icon">
+            <use href="./images/svg/symbol-defs.svg#icon-modalclose"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
